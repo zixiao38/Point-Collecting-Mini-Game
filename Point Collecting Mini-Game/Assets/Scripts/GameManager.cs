@@ -48,6 +48,7 @@ public class GameManager : MonoBehaviour
         }
 
         timerText.text = "Time: " + timeLeft.ToString("F5");
+        scoreText.text = "Score: " + score;
 
         if (timeLeft <= 0)
         {
