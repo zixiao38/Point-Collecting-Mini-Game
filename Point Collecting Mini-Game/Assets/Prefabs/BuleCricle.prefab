@@ -11,7 +11,9 @@ GameObject:
   - component: {fileID: 2011222065114546505}
   - component: {fileID: 1392516588389532560}
   - component: {fileID: 4875873601789872832}
-  - component: {fileID: 2200490725293680229}
+  - component: {fileID: 369222383020164692}
+  - component: {fileID: 7061889967509648867}
+  - component: {fileID: -2641173373916198119}
   m_Layer: 0
   m_Name: BuleCricle
   m_TagString: Untagged
@@ -130,7 +132,34 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.5
---- !u!114 &2200490725293680229
+--- !u!50 &369222383020164692
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5248116611928754486}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &7061889967509648867
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -142,5 +171,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9183176b51e59744b90c2afc329dc80c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
+  scoreValue: 1
+  clicksRequired: 1
+--- !u!114 &-2641173373916198119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5248116611928754486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9183176b51e59744b90c2afc329dc80c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CircleClick
   scoreValue: 2
   clicksRequired: 1

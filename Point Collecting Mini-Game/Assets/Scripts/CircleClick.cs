@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class NewMonoBehaviourScript : MonoBehaviour
+public class CircleClick : MonoBehaviour
 {
     public int scoreValue = 1;
     public int clicksRequired = 1;
@@ -17,19 +17,19 @@ public class NewMonoBehaviourScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     private void OnMouseDown()
     {
         currentClicks++;
-        if(currentClicks < clicksRequired)
+        if (currentClicks < clicksRequired)
         {
             spriteRenderer.color = Color.green;
             return;
         }
 
-        
+        GameManager.instance.AddScore(scoreValue);
 
         Destroy(gameObject);
     }

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1464053264387276717}
   - component: {fileID: 4210911663808326246}
   - component: {fileID: 1437417209537875474}
-  - component: {fileID: 2525413537527600934}
+  - component: {fileID: -1075070892608444588}
   m_Layer: 0
   m_Name: GreenCricle
   m_TagString: Untagged
@@ -130,7 +130,7 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.5
---- !u!114 &2525413537527600934
+--- !u!114 &-1075070892608444588
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -141,6 +141,6 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9183176b51e59744b90c2afc329dc80c, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
+  m_EditorClassIdentifier: Assembly-CSharp::CircleClick
   scoreValue: 1
   clicksRequired: 1
