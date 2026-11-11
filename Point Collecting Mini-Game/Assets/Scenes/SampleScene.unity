@@ -792,7 +792,7 @@ MonoBehaviour:
   blueCircle: {fileID: 5248116611928754486, guid: de2e9fc7876970f43a3be24791e73ab5, type: 3}
   greenCircle: {fileID: 2517382020129409898, guid: 9aa810337cbbb684392ef1f5e3a9a9fb, type: 3}
   orangeCircle: {fileID: 8976874701755582953, guid: 7e097e862ce96cb4b869f181495c8b95, type: 3}
-  spawnInterval: 3
+  spawnInterval: 0.5
   isSpawning: 0
 --- !u!1 &519420028
 GameObject:
@@ -2161,7 +2161,7 @@ MonoBehaviour:
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.8867924, g: 0.57857585, b: 0.008365828, a: 1}
-    m_PressedColor: {r: 0.8930817, g: 0.098295055, b: 0.098295055, a: 0.47058824}
+    m_PressedColor: {r: 0.7686275, g: 0.7686275, b: 0.7686275, a: 0.47058824}
     m_SelectedColor: {r: 0.47856915, g: 0.70440245, b: 0.09524925, a: 0.38431373}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -2646,8 +2646,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_HighlightedColor: {r: 1, g: 0.46064553, b: 0, a: 1}
+    m_PressedColor: {r: 0.24705884, g: 0.24705884, b: 0.24705884, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -2779,8 +2779,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_HighlightedColor: {r: 0.9748427, g: 0.57206404, b: 0, a: 1}
+    m_PressedColor: {r: 0.3137255, g: 0.3137255, b: 0.3137255, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1

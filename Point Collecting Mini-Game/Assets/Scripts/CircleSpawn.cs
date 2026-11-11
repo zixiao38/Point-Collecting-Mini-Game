@@ -7,7 +7,7 @@ public class CircleSpawn : MonoBehaviour
     public GameObject orangeCircle;
     public float spawnInterval = 0.5f;
     public bool isSpawning = false;
-    private float timer = 0f;
+    private float timer = 0;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -26,6 +26,7 @@ public class CircleSpawn : MonoBehaviour
         if(timer >= spawnInterval)
         {
             SpawnCorcle();
+            timer = 0;
         }
     }
 
