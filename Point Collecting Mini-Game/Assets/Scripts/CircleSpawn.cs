@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class CircleSpawn : MonoBehaviour
 {
-    public GameObject blueCircle;
+    public GameObject redCircle;
     public GameObject greenCircle;
     public GameObject orangeCircle;
     public float spawnInterval = 0.5f;
@@ -42,7 +42,7 @@ public class CircleSpawn : MonoBehaviour
         if (randomType == 0)
         {
             Vector3 spownPosition = new Vector3(randomX, topRight.y + 1, 0);
-            Instantiate(blueCircle, spownPosition, Quaternion.identity);
+            Instantiate(redCircle, spownPosition, Quaternion.identity);
         }
         else if(randomType == 1)
         {

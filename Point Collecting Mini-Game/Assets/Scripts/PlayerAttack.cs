@@ -6,10 +6,10 @@ public class PlayerAttack : MonoBehaviour
     public Transform SwordPivot;
     public float attackDuration = 0.3f;
     public float attackAngle = 120;
+    public bool isAttacking = false;
 
     private PlayerMovement playerMovement;
     private InputAction attackAction;
-    private bool isAttacking = false;
     private float attackTimer = 0;
     private float currentAngle = 0;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
