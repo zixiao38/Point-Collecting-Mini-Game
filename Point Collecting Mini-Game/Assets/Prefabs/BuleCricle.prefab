@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 1392516588389532560}
   - component: {fileID: 4875873601789872832}
   - component: {fileID: 369222383020164692}
-  - component: {fileID: 7061889967509648867}
   - component: {fileID: -2641173373916198119}
   m_Layer: 0
   m_Name: BuleCricle
@@ -147,7 +146,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0.8
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -159,20 +158,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &7061889967509648867
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5248116611928754486}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9183176b51e59744b90c2afc329dc80c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
-  scoreValue: 1
-  clicksRequired: 1
 --- !u!114 &-2641173373916198119
 MonoBehaviour:
   m_ObjectHideFlags: 0
