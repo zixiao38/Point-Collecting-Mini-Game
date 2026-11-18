@@ -1,5 +1,7 @@
-using UnityEngine;
 using TMPro;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UIElements;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
@@ -10,18 +12,12 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI targetText;
     public TextMeshProUGUI timerText;
-    public TextMeshProUGUI winScoreText;
-    public TextMeshProUGUI loseScoreText;
-
-    public GameObject startPanel;
-    public GameObject gamePanel;
-    public GameObject winPanel;
-    public GameObject losePanel;
-
     public CircleSpawn spawn;
-
-    private float timeLeft;
     private bool gameRun = false;
+    private float timeLeft;
+
+    public static int finalScore;
+    public static bool isWin;
 
     void Awake()
     {
@@ -30,7 +26,16 @@ public class GameManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        ShowStartScreen();
+        score = 0;
+        timeLeft = gameTime;
+        gameRun = true;
+
+        spawn.ClearCircles();
+        spawn.isSpawning = true;
+
+        scoreText.text = "Score: " + score;
+        targetText.text = "Target: " + targetScore;
+        timerText.text = "Time: " + timeLeft.ToString("F2");
     }
 
     // Update is called once per frame
@@ -47,7 +52,7 @@ public class GameManager : MonoBehaviour
             timeLeft = 0;
         }
 
-        timerText.text = "Time: " + timeLeft.ToString("F5");
+        timerText.text = "Time: " + timeLeft.ToString("F2");
         scoreText.text = "Score: " + score;
 
         if (timeLeft <= 0)
@@ -56,43 +61,16 @@ public class GameManager : MonoBehaviour
         }
 
     }
-
-    public void StartGame()
-    {
-        score = 0;
-        timeLeft = gameTime;
-        gameRun = true;
-
-        spawn.ClearCircles();
-        spawn.isSpawning = true;
-
-        startPanel.SetActive(false);
-        gamePanel.SetActive(true);
-        winPanel.SetActive(false);
-        losePanel.SetActive(false);
-
-        scoreText.text = "Score: " + score;
-        targetText.text = "Target: " + targetScore;
-        timerText.text = "Time: " + timeLeft.ToString("F5");
-    }
     void EndGame()
     {
         gameRun = false;
         spawn.isSpawning = false;
         spawn.ClearCircles();
 
-        gamePanel.SetActive(false);
+        finalScore = score;
+        isWin = score >= targetScore;
 
-        if (score >= targetScore)
-        {
-            winPanel.SetActive(true);
-            winScoreText.text = "Final Score: " + score;
-        }
-        else
-        {
-            losePanel.SetActive(true);
-            loseScoreText.text = "Final Score: " + score;
-        }
+        SceneManager.LoadScene("ResultScene");
     }
 
     public void AddScore(int points)
@@ -102,16 +80,5 @@ public class GameManager : MonoBehaviour
             return;
         }
         score += points;
-    }
-    public void ShowStartScreen()
-    {
-        gameRun = false;
-        spawn.isSpawning = false;
-        spawn.ClearCircles();
-
-        startPanel.SetActive(true);
-        gamePanel.SetActive(false);
-        winPanel.SetActive(false);
-        losePanel.SetActive(false);
     }
 }

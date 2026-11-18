@@ -121,7 +121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f7aac8aa7d9d794da2e5c66b4c361a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CircleHealth
-  scoreValue: 4
+  scoreValue: 3
   hitRequired: 1
 --- !u!58 &4875873601789872832
 CircleCollider2D:
