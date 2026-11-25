@@ -8,10 +8,12 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D player;
     private InputAction moveAction;
     private Vector2 movement;
+    private Animator PlayerAnimator;
     void Start()
     {
         moveAction = InputSystem.actions.FindAction("Move");
         player = GetComponent<Rigidbody2D>();
+        PlayerAnimator = GetComponent<Animator>();
     }
 
     void Update()
@@ -23,5 +25,28 @@ public class PlayerMovement : MonoBehaviour
             facingDirection = movement;
         }
         player.linearVelocity = movement * speed;
+        UpdatePlayerAnimation();
+    }
+
+    private void UpdatePlayerAnimation()
+    {
+        int state = 0;
+        if(movement.y > 0)
+        {
+            state = 2;
+        }
+        else if (movement.y < 0)
+        {
+            state = 1;
+        }
+        else if (movement.x > 0)
+        {
+            state = 3;
+        }
+        else if (movement.x < 0)
+        {
+            state = 4;
+        }
+        PlayerAnimator.SetInteger("State", state);
     }
 }
