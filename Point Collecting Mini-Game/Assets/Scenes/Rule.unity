@@ -1440,7 +1440,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'WASD  Move     SPACE / MOUSE LEFT '
+  m_text: 'MOVE: WASD       ATTACK: SPACE / MOUSE LEFT '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8a41efe81a76fe54697d83c5afe0753f, type: 2}
   m_sharedMaterial: {fileID: -6119960711330489573, guid: 8a41efe81a76fe54697d83c5afe0753f, type: 2}
