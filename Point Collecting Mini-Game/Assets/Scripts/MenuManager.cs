@@ -12,4 +12,8 @@ public class MenuManager : MonoBehaviour
     {
         SceneManager.LoadScene("Rule");
     }
+    public void BackToMenu()
+    {
+        SceneManager.LoadScene("Menu");
+    }
 }

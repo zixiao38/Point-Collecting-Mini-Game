@@ -9,28 +9,18 @@ public class ResultManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        Debug.Log("ResultManager Start");
-
-        Debug.Log("Title: " + title);
-        Debug.Log("ScoreText: " + scoreText);
-
-        if (title == null || scoreText == null)
-        {
-            Debug.LogError("ResultManager UI reference is missing!");
-            return;
-        }
 
         if (GameManager.isWin)
         {
-            title.text = "WIN!";
-            title.color = Color.green;
+            title.text = "VICTORY!";
+            title.color = new Color32(239, 199, 125, 255);
         }
         else
         {
-            title.text = "LOSE";
-            title.color = Color.red;
+            title.text = "LOSE!";
+            title.color = new Color32(231, 159, 148, 255);
         }
-        scoreText.text = "Final Score: " + GameManager.finalScore;
+        scoreText.text = "FINAL SCORE  " + GameManager.finalScore;
     }
     public void BackToMenu()
     {
